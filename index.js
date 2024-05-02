@@ -1,17 +1,34 @@
 import express from 'express';
-import cors from 'cors';
-import productsRouter from './product.js';
+import data from './data.json';
 
-const app = express();
+const router = express.Router();
 
-app.use(cors());
-
-app.use('/api', productsRouter);
-
-const port = process.env.PORT || 4000;
-
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
+router.get('/products', (req, res) => {
+  res.json(data.products);
 });
 
-export default app;
+router.get('/favorites-list', (req, res) => {
+  res.json(data['favorites-list']);
+});
+
+router.get('/notifications', (req, res) => {
+  res.json(data.notifications);
+});
+
+router.get('/status-report', (req, res) => {
+  res.json(data['status-report']);
+});
+
+router.get('/your-cart', (req, res) => {
+  res.json(data['your-cart']);
+});
+
+router.get('/orders', (req, res) => {
+  res.json(data.orders);
+});
+
+router.get('/returns-list', (req, res) => {
+  res.json(data['returns-list']);
+});
+
+export default router;
