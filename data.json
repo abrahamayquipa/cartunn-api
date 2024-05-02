@@ -41,7 +41,7 @@
             "image": "https://www.autotuningperu.pe/wp-content/uploads/2022/05/neblinero-sz-s-cross-logan-pg-207-sandero-explorer-sin-foco-l-r-1.jpg"
         }
     ],
-    "favorites-list": [
+    "favorites": [
         {
             "title": "Spring Kit Eibach Pro Kit For Ford Focus Limousine",
             "description": "Double oval sport exhaust tailpipe 65x55x160. Made in stainless steel and aluminum by Ulter Sport. Price includes VAT. Double oval sport exhaust tailpipe 65x55x160. Made in stainless steel and aluminum by Ulter Sport. Price includes VAT.",
@@ -85,7 +85,7 @@
             "description": "This is a message indicating that the process is in progress. Sed at lacus ex. Mauris id libero sit amet enim ullamcorper placerat. Aliquam vel odio eget eros suscipit cursus. Pellentesque quis nunc sed nisl rhoncus suscipit. Duis ultricies ex vel odio dapibus, ac facilisis orci fermentum. Vestibulum consectetur neque eu justo feugiat, sed ultrices leo varius."
         }
     ],
-    "status-report": [
+    "status": [
         {
             "modified-part": "Suspension Upgrade: Eibach Pro-Kit for Ford Focus Sedan",
             "date": "2022-05-01",
@@ -147,7 +147,7 @@
             "status": "❌ Error"
         }
     ],
-    "your-cart": [
+    "cart": [
         {
             "title": "Spring Kit Eibach Pro Kit For Ford Focus Limousine",
             "model": "Ford Focus",
@@ -187,7 +187,7 @@
             "status": "Success"
         }
     ],
-    "returns-list": [
+    "returns": [
         {
             "title": "Spring Kit Eibach Pro Kit For Ford Focus Limousine",
             "description": "Double oval sport exhaust tailpipe 65x55x160. Made in stainless steel and aluminum by Ulter Sport. Price includes VAT. Double oval sport exhaust tailpipe 65x55x160. Made in stainless steel and aluminum by Ulter Sport. Price includes VAT.",

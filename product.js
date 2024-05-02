@@ -1,37 +1,35 @@
 import express from 'express';
+import fs from 'fs';
 
-const productsRouter = (data) => {
-    const router = express.Router();
+const app = express.Router();
+const data = JSON.parse(fs.readFileSync('data.json', 'utf-8'));
 
-    router.get('/products', (req, res) => {
-        res.json(data.products);
-    });
+app.get('/', (req, res) => {
+    res.send(data);
+});
 
-    router.get('/favorites-list', (req, res) => {
-        res.json(data['favorites-list']);
-    });
+app.get('/favorites', (req, res) => {
+    res.send(data.favorites);
+});
 
-    router.get('/notifications', (req, res) => {
-        res.json(data.notifications);
-    });
+app.get('/notifications', (req, res) => {
+    res.send(data.notifications);
+});
 
-    router.get('/status-report', (req, res) => {
-        res.json(data['status-report']);
-    });
+app.get('/status-report', (req, res) => {
+    res.send(data.status);
+});
 
-    router.get('/your-cart', (req, res) => {
-        res.json(data['your-cart']);
-    });
+app.get('/shopping-cart', (req, res) => {
+    res.send(data.cart);
+});
 
-    router.get('/orders', (req, res) => {
-        res.json(data.orders);
-    });
+app.get('/orders', (req, res) => {
+    res.send(data.orders);
+});
 
-    router.get('/returns-list', (req, res) => {
-        res.json(data['returns-list']);
-    });
+app.get('/returns-list', (req, res) => {
+    res.send(data.returns);
+});
 
-    return router;
-};
-
-export default productsRouter;
+export default app;
