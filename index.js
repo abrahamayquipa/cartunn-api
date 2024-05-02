@@ -1,34 +1,22 @@
 import express from 'express';
-import data from './data.json';
+import cors from 'cors';
+import productsRouter from './product.js';
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
+import { readFileSync } from 'fs';
 
-const router = express.Router();
+const app = express();
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
-router.get('/products', (req, res) => {
-  res.json(data.products);
+app.use(cors());
+
+const data = JSON.parse(readFileSync(join(__dirname, 'data.json'), 'utf-8'));
+
+app.use('/api', productsRouter(data));
+
+const port = process.env.PORT || 4000;
+
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
 });
-
-router.get('/favorites-list', (req, res) => {
-  res.json(data['favorites-list']);
-});
-
-router.get('/notifications', (req, res) => {
-  res.json(data.notifications);
-});
-
-router.get('/status-report', (req, res) => {
-  res.json(data['status-report']);
-});
-
-router.get('/your-cart', (req, res) => {
-  res.json(data['your-cart']);
-});
-
-router.get('/orders', (req, res) => {
-  res.json(data.orders);
-});
-
-router.get('/returns-list', (req, res) => {
-  res.json(data['returns-list']);
-});
-
-export default router;
